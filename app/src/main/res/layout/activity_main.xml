@@ -21,4 +21,12 @@
         tools:layout_editor_absoluteX="31dp"
         tools:layout_editor_absoluteY="35dp" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sgfsf"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="95dp" />
+
 </android.support.constraint.ConstraintLayout>
