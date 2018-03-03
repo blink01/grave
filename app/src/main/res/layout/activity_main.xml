@@ -48,12 +48,12 @@
             android:text= "@string/tim_newport"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/historyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="7"
             android:layout_row="13"
-            android:text="Button" />
+            android:text="@string/history" />
     </GridLayout>
 
 </android.support.constraint.ConstraintLayout>

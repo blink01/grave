@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">Register-Graves2</string>
+    <string name="app_name">Register Graves2</string>
     <string name="blink">Eugene Blink</string>
     <string name="hello_world">Hello World</string>
     <string name="eugene_blink">Eugene Blink</string>
     <string name="nick_simonelli">Nick Simonelli</string>
     <string name="tim_newport">Tim Newport on work PC</string>
+    <string name="buttonReturn">Return to Main Screen</string>
+    <string name="history">HISTORY</string>
 </resources>
