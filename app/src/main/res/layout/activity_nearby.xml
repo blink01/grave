@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="franklin.register_graves2.NearbyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header_nearby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="cursive"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/find_a_marker"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/search_nearby_auto_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/search"
+            android:drawableStart="@drawable/ic_action_search"
+            />
+
+        <Button
+            android:id="@+id/search_nearby_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_dark"
+            android:text="@string/send_the_search_party" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/nearby_map"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
