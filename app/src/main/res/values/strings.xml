@@ -7,4 +7,7 @@
     <string name="tim_newport">Tim Newport on work PC</string>
     <string name="buttonReturn">Return to Main Screen</string>
     <string name="history">HISTORY</string>
+    <string name="displaySub">New Submission</string>
+    <string name="ranklvl">Rank</string>
+    <string name="displayUp">Update</string>
 </resources>
