@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         histButton();
+        registrationButton();
+        newSubmissionButton();
     }
 
     private void histButton() {
@@ -21,10 +24,33 @@ public class MainActivity extends AppCompatActivity {
         historyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentHist = new Intent (MainActivity.this, History.class);
+                Intent intentHist = new Intent(MainActivity.this, History.class);
                 startActivity(intentHist);
             }
         });
     }
 
+    private void registrationButton() {
+        Button historyButton = (Button) findViewById(R.id.registrationButton);
+        historyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHist = new Intent(MainActivity.this, Registration.class);
+                startActivity(intentHist);
+            }
+        });
+    }
+
+    private void newSubmissionButton() {
+        ImageButton historyButton = (ImageButton) findViewById(R.id.newSubmissionButton);
+        historyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHist = new Intent(MainActivity.this, newSubmission.class);
+                startActivity(intentHist);
+            }
+        });
+    }
 }
+
+

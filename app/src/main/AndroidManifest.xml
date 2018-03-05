@@ -17,6 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".History" />
+        <activity
+            android:name=".Landing"
+            android:label="@string/title_activity_landing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Registration" />
+        <activity android:name=".newSubmission"></activity>
     </application>
 
 </manifest>
