@@ -101,6 +101,14 @@ public class Landing extends AppCompatActivity
 
         } else if (id == R.id.nav_user_registration) {
 
+        } else if (id == R.id.nav_achievement) {
+            Button achieveButton = (Button) findViewById(R.id.nav_achievement);
+            achieveButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(Landing.this, Achievements.class));
+                }
+            });
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
