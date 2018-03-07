@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -55,10 +56,10 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "tim.newport@gmail.com:Password", "newpor04@email.franklin.edu:Class"
+            "me@gmail.com:P@ssw0rd"
     };
     /**
-     * Keep track of the login task to ensure we can cancel it if requested.
+     * Keep track of the login task to ensure e can cancel it if requested.
      */
     private UserLoginTask mAuthTask = null;
 
@@ -150,14 +151,16 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
 
     /**Lets Validate the Email Address and Password*/
     public boolean validateEmail(final String email) {
-        final String EMAIL_PATTERN = "^[a-zA-Z0-9#_~!$&'()*+,;=:.\"(),:;<>@\\[\\]\\\\]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*$";
+
+        final String EMAIL_PATTERN = "^[a-zA-Z0-9#_~!$&'()*+,;=:.\"<>@\\[\\]\\\\]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*$";
         Pattern email_pattern = Pattern.compile(EMAIL_PATTERN);
         Matcher email_matcher = email_pattern.matcher(email);
         return email_matcher.matches();
     }
 
     public boolean validatePassword(final String password) {
-        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        //Contains a number, upper case,special character,and 8 non whitespace characters
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$";
         Pattern pass_pattern = Pattern.compile(PASSWORD_PATTERN);
         Matcher pass_matcher = pass_pattern.matcher(password);
 
@@ -340,7 +343,9 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
                 }
             }
 
-            // TODO: register the new account here.
+            Intent intent_reg = new Intent( Login.this, Registration.class);
+            startActivity(intent_reg);
+            finish();
             return true;
         }
 
@@ -350,6 +355,8 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
             showProgress(false);
 
             if (success) {
+                Intent intent_login = new Intent( Login.this, MainActivity.class);
+                startActivity(intent_login);
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
