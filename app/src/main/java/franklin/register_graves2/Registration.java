@@ -17,7 +17,7 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        returnButton();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,17 +26,17 @@ public class Registration extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
 
-        Button reg_button = (Button) findViewById(R.id.reg_login);
-
-        reg_button.setOnClickListener(new View.OnClickListener() {
+    private void returnButton() {
+        Button retButton = (Button) findViewById(R.id.return_home_from_reg);
+        retButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_login = new Intent( Registration.this, MainActivity.class);
-                startActivity(intent_login);
-                finish();
+                Intent intentOne = new Intent( Registration.this, MainActivity.class);
+                startActivity(intentOne);
             }
         });
     }
 
-    }
+}
