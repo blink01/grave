@@ -2,8 +2,6 @@ package franklin.register_graves2;
 
         import android.content.Intent;
         import android.os.Bundle;
-        import android.support.design.widget.FloatingActionButton;
-        import android.support.design.widget.Snackbar;
         import android.view.View;
         import android.support.design.widget.NavigationView;
         import android.support.v4.view.GravityCompat;
@@ -14,6 +12,7 @@ package franklin.register_graves2;
         import android.view.Menu;
         import android.view.MenuItem;
         import android.widget.Button;
+        import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -39,6 +38,11 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        histButton();
+        achievementsButton();
+        nearbyButton();
+        newSubmissionButton();
+        registerButton();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -122,6 +126,49 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intentHist = new Intent(MainActivity.this, History.class);
+                startActivity(intentHist);
+            }
+        });
+    }
+
+    private void achievementsButton() {
+        Button historyButton = (Button) findViewById(R.id.nav_achievements);
+        historyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHist = new Intent(MainActivity.this, Achievements.class);
+                startActivity(intentHist);
+            }
+        });
+    }
+
+    private void nearbyButton() {
+        Button historyButton = (Button) findViewById(R.id.nav_nearby);
+        historyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHist = new Intent(MainActivity.this, NearbyActivity.class);
+                startActivity(intentHist);
+            }
+        });
+    }
+    private void registerButton() {
+        Button historyButton = (Button) findViewById(R.id.nav_registration);
+        historyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHist = new Intent(MainActivity.this, Registration.class);
+                startActivity(intentHist);
+            }
+        });
+    }
+
+    private void newSubmissionButton() {
+        ImageButton historyButton = (ImageButton) findViewById(R.id.nav_submission);
+        historyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHist = new Intent(MainActivity.this, newSubmission.class);
                 startActivity(intentHist);
             }
         });

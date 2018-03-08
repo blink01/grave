@@ -9,9 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public abstract class newSubmission extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class newSubmission extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Spinner spinner;
-    private static final String[] paths = {"item 1", "item 2", "item 3"};
+    private static final String[] paths = {"item 1", "item 2", "item 3", "item 4", "item 5"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public abstract class newSubmission extends AppCompatActivity implements Adapter
         //get the spinner from the xml.
         Spinner dropdown = findViewById(R.id.condition);
 //create a list of items for the spinner.
-        String[] items = new String[]{"1", "2", "three"};
+        String[] items = new String[]{"Placeholder_1", "Placeholder_2", "Placeholder_3", "Placeholder_4", "Placeholder_5"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -62,5 +62,10 @@ public abstract class newSubmission extends AppCompatActivity implements Adapter
                 break;
 
         }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
