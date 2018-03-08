@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity
                 public void onClick(View view) {
                     // Intent intentHist = new Intent(MainActivity.this, History.class);
                     startActivity(new Intent(MainActivity.this, History.class));
+                    finish();
                 }
             });
         } else if (id == R.id.nav_nearby_graves) {
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity
                 @Override
                 public void onClick(View view) {
                     startActivity(new Intent(MainActivity.this, Achievements.class));
+                    finish();
                 }
             });
         }
@@ -127,6 +129,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Intent intentHist = new Intent(MainActivity.this, History.class);
                 startActivity(intentHist);
+                finish();
             }
         });
     }
@@ -138,6 +141,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Intent intentHist = new Intent(MainActivity.this, Achievements.class);
                 startActivity(intentHist);
+                finish();
             }
         });
     }
@@ -147,8 +151,9 @@ public class MainActivity extends AppCompatActivity
         historyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentHist = new Intent(MainActivity.this, NearbyActivity.class);
-                startActivity(intentHist);
+                Intent intentNearby = new Intent(MainActivity.this, NearbyActivity.class);
+                startActivity(intentNearby);
+                finish();
             }
         });
     }
@@ -157,8 +162,9 @@ public class MainActivity extends AppCompatActivity
         historyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentHist = new Intent(MainActivity.this, Registration.class);
-                startActivity(intentHist);
+                Intent intentRegist = new Intent(MainActivity.this, Registration.class);
+                startActivity(intentRegist);
+                finish();
             }
         });
     }
@@ -168,8 +174,9 @@ public class MainActivity extends AppCompatActivity
         historyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentHist = new Intent(MainActivity.this, newSubmission.class);
-                startActivity(intentHist);
+                Intent intentnew = new Intent(MainActivity.this, newSubmission.class);
+                startActivity(intentnew);
+                finish();
             }
         });
     }

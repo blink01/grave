@@ -6,7 +6,10 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <!-- / -->
     <application
@@ -20,34 +23,34 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="@string/title_activity_landing"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
         <activity
             android:name=".Registration"
             android:label="@string/title_activity_registration"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
-
         <activity android:name=".Achievements" />
-        <activity android:name=".History" />
-        <activity android:name=".NearbyActivity" />
+        <activity
+            android:name=".History"
+            android:label="@string/history"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".NearbyActivity"
+            android:label="@string/title_activity_nearby"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".newSubmission" />
-
-
+        <activity
+            android:name=".ActivityLister"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

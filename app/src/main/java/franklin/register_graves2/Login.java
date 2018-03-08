@@ -343,6 +343,7 @@ public class Login extends AppCompatActivity implements LoaderCallbacks<Cursor> 
                 }
             }
 
+            // If Valid username and Password and not in the system then register the user.
             Intent intent_reg = new Intent( Login.this, Registration.class);
             startActivity(intent_reg);
             finish();
