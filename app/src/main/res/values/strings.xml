@@ -42,5 +42,8 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="loading">Loading...</string>
+    <string name="error_message">Error processing request</string>
+    <string name="agreement">Agreement</string>
 
 </resources>
