@@ -2,11 +2,11 @@
 include 'config.php';
 
      // Check whether username or password is set from android	
-     if(isset($_POST['user_name']) && isset($_POST['password']))
+     if(isset($_POST['email']) && isset($_POST['password']))
      {
       // Innitialize Variable
       $result='';
-        $username = $_POST['user_name'];
+        $username = $_POST['email'];
           $password = $_POST['password'];
       
       // Query database for row exist or not
